@@ -1,0 +1,40 @@
+body {
+    background-color: #457b9d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d3557;
+    width: 100%;
+}
+
+.selectionBox {
+    
+    display: flex;
+    gap: 10px;
+    
+}
+
+.selectionBox > div {
+    width: 100px;
+    border: 4px solid black;
+}
+
+.selectionBox > div:hover {
+background-color: red;
+cursor: pointer;
+}
+
+.scoreBox {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
