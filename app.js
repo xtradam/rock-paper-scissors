@@ -27,9 +27,11 @@ function playGame(playerChoice) {
         if (computerChoice === 'Scissors') {
             playerScore.textContent++;
             secondTitle.textContent = 'You win this round!';
+            gameStatus();
         } else if (computerChoice === 'Paper') {
             computerScore.textContent++;
             secondTitle.textContent = 'The computer wins :('
+            gameStatus();
         } else {
             secondTitle.textContent = "It's a tie! No points are added.";
         }
@@ -37,9 +39,11 @@ function playGame(playerChoice) {
         if (computerChoice === 'Rock') {
             playerScore.textContent++;
             secondTitle.textContent = 'You win this round!';
+            gameStatus();
         } else if (computerChoice === 'Scissors') {
             computerScore.textContent++;
             secondTitle.textContent = 'The computer wins :('
+            gameStatus();
         } else {
             secondTitle.textContent = "It's a tie! No points are added.";
         }
@@ -47,9 +51,11 @@ function playGame(playerChoice) {
             if (computerChoice === 'Paper') {
                 playerScore.textContent++;
                 secondTitle.textContent = 'You win this round!';
+                gameStatus();
             } else if (computerChoice === 'Rock') {
                 computerScore.textContent++;
                 secondTitle.textContent = 'The computer wins :('
+                gameStatus();
             } else {
                 secondTitle.textContent = "It's a tie! No points are added.";
             }
@@ -57,3 +63,13 @@ function playGame(playerChoice) {
     }
 }
 
+function gameStatus() {
+    if (playerScore.textContent >= 5) {
+        firstTitle.textContent = 'You win!';
+        secondTitle.textContent ='Play again?';
+    } else if (computerScore.textContent >=5 ) {
+        firstTitle.textContent = 'The computer wins :(';
+        secondTitle.textContent ='Play again?';
+    }
+
+}
